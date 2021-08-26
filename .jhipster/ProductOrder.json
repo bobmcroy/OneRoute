@@ -1,0 +1,48 @@
+{
+  "name": "ProductOrder",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min", "max"],
+      "fieldValidateRulesMin": "0",
+      "fieldValidateRulesMax": "5"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "productOrder",
+      "relationshipValidateRules": "required",
+      "relationshipName": "buyer",
+      "otherEntityField": "login"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "productOrder",
+      "relationshipValidateRules": "required",
+      "relationshipName": "product",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "shoppingOrder",
+      "otherEntityRelationshipName": "orders",
+      "relationshipValidateRules": "required",
+      "relationshipName": "overallOrder",
+      "otherEntityField": "name"
+    }
+  ],
+  "entityTableName": "product_order",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["my_simple_shop"],
+  "changelogDate": "20210826012841"
+}
