@@ -7,6 +7,7 @@
     "monitoring": "no",
     "serviceDiscoveryType": "eureka",
     "deploymentType": "docker-compose",
-    "dockerRepositoryName": "joedata"
+    "dockerRepositoryName": "joedata",
+    "jwtSecretKey": "OTFmMWM0ODY0N2EyMDJhZGQwNDIyMjM5YzlmZTQ2NWVkMzBmMTUwMWM5YzgzMjVhZDgyNjIzZjE3ZjFiNDM4OTgzNDM5MTRiZTIwZjkwOGRkMTU2YTAzM2ZiYmI5NTU2M2IyNg=="
   }
 }
