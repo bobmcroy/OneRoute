@@ -120,6 +120,18 @@ export const Product = (props: RouteComponentProps<{ url: string }>) => {
                   <td>{product.inventory}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
+                      <Button tag={Link} to={`${match.url}/${product.id}/arch`} color="secondary" size="sm" data-cy="entityArchButton">
+                        <FontAwesomeIcon icon="sync" />{' '}
+                        <span className="d-none d-md-inline">
+                          <Translate contentKey="entity.action.arch">Arch</Translate>
+                        </span>
+                      </Button>
+                      <Button tag={Link} to={`${match.url}/${product.id}/apis`} color="secondary" size="sm" data-cy="entityApisButton">
+                        <FontAwesomeIcon icon="sync" />{' '}
+                        <span className="d-none d-md-inline">
+                          <Translate contentKey="entity.action.apis">Arch</Translate>
+                        </span>
+                      </Button>
                       <Button tag={Link} to={`${match.url}/${product.id}`} color="info" size="sm" data-cy="entityDetailsButton">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">

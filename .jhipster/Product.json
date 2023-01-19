@@ -34,7 +34,7 @@
     {
       "fieldName": "category",
       "fieldType": "ProductCategory",
-      "fieldValues": "Laptop,Desktop,Phone,Tablet,Accessory"
+      "fieldValues": "Python,Angular,Go,Java,React"
     },
     {
       "fieldName": "inventory",

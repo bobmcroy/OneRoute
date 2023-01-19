@@ -2,30 +2,30 @@
   "mySimpleShopApp": {
     "product": {
       "home": {
-        "title": "Products",
+        "title": "Product Catalog",
         "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Product",
-        "createOrEditLabel": "Create or edit a Product",
+        "createLabel": "Add a new Product",
+        "createOrEditLabel": "Add or edit a Product",
         "notFound": "No Products found"
       },
-      "created": "A new Product is created with identifier {{ param }}",
+      "created": "A new Product is added with identifier {{ param }}",
       "updated": "A Product is updated with identifier {{ param }}",
       "deleted": "A Product is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Product {{ id }}?"
+        "question": "Are you sure you want to remove Product {{ id }}?"
       },
       "detail": {
         "title": "Product"
       },
       "id": "ID",
       "name": "Name",
-      "price": "Price",
+      "price": "Created",
       "description": "Description",
-      "picture": "Picture",
-      "specification": "Specification",
-      "category": "Category",
-      "inventory": "Inventory",
-      "productOrder": "Product Order"
+      "picture": "Updated",
+      "specification": "Repo Link",
+      "category": "Languages",
+      "inventory": "Forks",
+      "productOrder": "Stars"
     }
   }
 }

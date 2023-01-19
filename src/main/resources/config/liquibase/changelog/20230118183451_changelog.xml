@@ -1,0 +1,136 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="robert.mcroy (generated)" id="1674066896793-1">
+        <!-- row 1 updates -->
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="name" value="Code Genie"/>
+            <where>id='1'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="price" value="01252021"/>
+            <where>id='1'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="description" value="Provides one-off workflow automation (campaigns) or recurring automation via a scheduler."/>
+            <where>id='1'</where>
+        </update>
+
+        <!-- row 2 updates -->
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="name" value="AVR"/>
+            <where>id='2'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="price" value="03192020"/>
+            <where>id='2'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="description" value="Provides AMI rehydration automation via a scheduler."/>
+            <where>id='2'</where>
+        </update>
+
+        <!-- row 2 updates -->
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="name" value="OpsInsight"/>
+            <where>id='3'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="price" value="06092021"/>
+            <where>id='3'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="description" value="Identifies cloud resource compliance issues."/>
+            <where>id='3'</where>
+        </update>
+
+        <!-- row 2 updates -->
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="name" value="SpendWise"/>
+            <where>id='4'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="price" value="04222019"/>
+            <where>id='4'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="description" value="Helps determine cost effectiveness for cloud resources."/>
+            <where>id='4'</where>
+        </update>
+
+        <!-- row 2 updates -->
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="name" value="RST API"/>
+            <where>id='5'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="price" value="11032021"/>
+            <where>id='5'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="description" value="Automates correct sizing for cloud resources based on utilization."/>
+            <where>id='5'</where>
+        </update>
+
+        <!-- row 2 updates -->
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="name" value="Custodian"/>
+            <where>id='6'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="price" value="09232018"/>
+            <where>id='6'</where>
+        </update>
+
+        <update catalogName="liquibase"
+                schemaName="public"
+                tableName="product">
+            <column name="description" value="Compliance tool for cloud resources."/>
+            <where>id='6'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>
