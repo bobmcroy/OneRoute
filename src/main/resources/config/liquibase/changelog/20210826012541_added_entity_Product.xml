@@ -7,39 +7,35 @@
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <!--
-        Added the entity Product.
+        Added the entity Toolset.
     -->
     <changeSet id="20210826012541-1" author="jhipster">
-        <createTable tableName="product">
+        <createTable tableName="toolset">
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="varchar(90)">
                 <constraints nullable="false" unique="true" uniqueConstraintName="ux_product__name" />
             </column>
-            <column name="price" type="${floatType}">
-                <constraints nullable="false" />
-            </column>
             <column name="description" type="${clobType}">
-                <constraints nullable="false" />
-            </column>
-            <column name="picture" type="longblob">
-                <constraints nullable="false" />
-            </column>
-            <column name="picture_content_type" type="varchar(255)">
-                <constraints nullable="false" />
-            </column>
-            <column name="specification" type="longblob">
                 <constraints nullable="true" />
             </column>
-            <column name="specification_content_type" type="varchar(255)">
+            <column name="repo_link" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="category" type="varchar(255)">
+            <column name="usage" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="inventory" type="integer">
-                <constraints nullable="false" />
+            <column name="languages" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="created_date" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="last_updated_date" type="varchar(255)">
+                <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </createTable>
@@ -57,19 +53,19 @@
     -->
     <changeSet id="20210826012541-1-data" author="jhipster" context="faker">
         <loadData
-                  file="config/liquibase/fake-data/product.csv"
-                  separator=";"
-                  tableName="product">
+            file="config/liquibase/fake-data/product.csv"
+            separator=";"
+            tableName="product">
             <column name="id" type="numeric"/>
             <column name="name" type="string"/>
             <column name="price" type="numeric"/>
             <column name="description" type="clob"/>
             <column name="picture" type="blob"/>
             <column name="picture_content_type" type="string"/>
-            <column name="specification" type="blob"/>
+            <column name="specification" type="string"/>
             <column name="specification_content_type" type="string"/>
             <column name="category" type="string"/>
-            <column name="inventory" type="numeric"/>
+            <column name="inventory" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>
     </changeSet>

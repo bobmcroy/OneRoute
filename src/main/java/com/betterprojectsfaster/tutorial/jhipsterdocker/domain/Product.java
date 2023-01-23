@@ -31,15 +31,15 @@ public class Product implements Serializable {
     @Column(name = "name", length = 90, nullable = false, unique = true)
     private String name;
 
-    @NotNull
-    @DecimalMin(value = "0")
-    @Column(name = "price", nullable = false)
-    private Float price;
-
     @Lob
     @Type(type = "org.hibernate.type.TextType")
     @Column(name = "description", nullable = false)
     private String description;
+
+    @NotNull
+    @DecimalMin(value = "0")
+    @Column(name = "price", nullable = false)
+    private Float price;
 
     @Lob
     @Column(name = "picture", nullable = false)
@@ -48,9 +48,8 @@ public class Product implements Serializable {
     @Column(name = "picture_content_type", nullable = false)
     private String pictureContentType;
 
-    @Lob
     @Column(name = "specification")
-    private byte[] specification;
+    private String specification;
 
     @Column(name = "specification_content_type")
     private String specificationContentType;
@@ -59,10 +58,8 @@ public class Product implements Serializable {
     @Column(name = "category")
     private ProductCategory category;
 
-    @NotNull
-    @Min(value = 0)
-    @Column(name = "inventory", nullable = false)
-    private Integer inventory;
+    @Column(name = "inventory")
+    private String inventory;
 
     @OneToMany(mappedBy = "product")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -148,16 +145,16 @@ public class Product implements Serializable {
         this.pictureContentType = pictureContentType;
     }
 
-    public byte[] getSpecification() {
+    public String getSpecification() {
         return this.specification;
     }
 
-    public Product specification(byte[] specification) {
+    public Product specification(String specification) {
         this.specification = specification;
         return this;
     }
 
-    public void setSpecification(byte[] specification) {
+    public void setSpecification(String specification) {
         this.specification = specification;
     }
 
@@ -187,16 +184,16 @@ public class Product implements Serializable {
         this.category = category;
     }
 
-    public Integer getInventory() {
+    public String getInventory() {
         return this.inventory;
     }
 
-    public Product inventory(Integer inventory) {
+    public Product inventory(String inventory) {
         this.inventory = inventory;
         return this;
     }
 
-    public void setInventory(Integer inventory) {
+    public void setInventory(String inventory) {
         this.inventory = inventory;
     }
 
@@ -256,8 +253,8 @@ public class Product implements Serializable {
         return "Product{" +
             "id=" + getId() +
             ", name='" + getName() + "'" +
-            ", price=" + getPrice() +
             ", description='" + getDescription() + "'" +
+            ", price=" + getPrice() +
             ", picture='" + getPicture() + "'" +
             ", pictureContentType='" + getPictureContentType() + "'" +
             ", specification='" + getSpecification() + "'" +

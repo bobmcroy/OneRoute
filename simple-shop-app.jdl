@@ -42,13 +42,13 @@ entity Product {
   price Float required min(0)
   description TextBlob required
   picture ImageBlob required
-  specification Blob
+  specification TextBlob
   category ProductCategory
-  inventory Integer required min(0)
+  inventory TextBlob
 }
 
 enum ProductCategory {
-  Laptop, Desktop, Phone, Tablet, Accessory
+  Vulnerability, Compliance, None, Cost, Rehydration
 }
 
 entity Address {

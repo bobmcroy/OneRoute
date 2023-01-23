@@ -2,11 +2,11 @@
   "mySimpleShopApp": {
     "ProductCategory": {
       "null": "",
-      "Laptop": "Laptop",
-      "Desktop": "Desktop",
-      "Phone": "Phone",
-      "Tablet": "Tablet",
-      "Accessory": "Accessory"
+      "Vulnerability": "Vulnerability",
+      "Compliance": "Compliance",
+      "None": "None",
+      "Cost": "Cost",
+      "Rehydration": "Rehydration"
     }
   }
 }

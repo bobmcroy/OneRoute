@@ -56,7 +56,7 @@ export const ProductUpdate = (props: RouteComponentProps<{ id: string }>) => {
       ? {}
       : {
           ...productEntity,
-          category: 'Laptop',
+          category: 'Vulnerability',
         };
 
   return (
@@ -143,11 +143,11 @@ export const ProductUpdate = (props: RouteComponentProps<{ id: string }>) => {
                 data-cy="category"
                 type="select"
               >
-                <option value="Laptop">{translate('mySimpleShopApp.ProductCategory.Laptop')}</option>
-                <option value="Desktop">{translate('mySimpleShopApp.ProductCategory.Desktop')}</option>
-                <option value="Phone">{translate('mySimpleShopApp.ProductCategory.Phone')}</option>
-                <option value="Tablet">{translate('mySimpleShopApp.ProductCategory.Tablet')}</option>
-                <option value="Accessory">{translate('mySimpleShopApp.ProductCategory.Accessory')}</option>
+                <option value="Vulnerability">{translate('mySimpleShopApp.ProductCategory.Vulnerability')}</option>
+                <option value="Compliance">{translate('mySimpleShopApp.ProductCategory.Desktop')}</option>
+                <option value="None">{translate('mySimpleShopApp.ProductCategory.Phone')}</option>
+                <option value="Cost">{translate('mySimpleShopApp.ProductCategory.Tablet')}</option>
+                <option value="Rehydration">{translate('mySimpleShopApp.ProductCategory.Rehydration')}</option>
               </ValidatedField>
               <ValidatedField
                 label={translate('mySimpleShopApp.product.inventory')}
@@ -155,11 +155,6 @@ export const ProductUpdate = (props: RouteComponentProps<{ id: string }>) => {
                 name="inventory"
                 data-cy="inventory"
                 type="text"
-                validate={{
-                  required: { value: true, message: translate('entity.validation.required') },
-                  min: { value: 0, message: translate('entity.validation.min', { min: 0 }) },
-                  validate: v => isNumber(v) || translate('entity.validation.number'),
-                }}
               />
               <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/product" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />

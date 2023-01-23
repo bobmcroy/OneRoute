@@ -82,8 +82,8 @@ export const Product = (props: RouteComponentProps<{ url: string }>) => {
                     </Button>
                   </td>
                   <td>{product.name}</td>
-                  <td>{product.price}</td>
                   <td>{product.description}</td>
+                  <td>{product.price}</td>
                   <td>
                     {product.picture ? (
                       <div>
@@ -99,21 +99,7 @@ export const Product = (props: RouteComponentProps<{ url: string }>) => {
                       </div>
                     ) : null}
                   </td>
-                  <td>
-                    {product.specification ? (
-                      <div>
-                        {product.specificationContentType ? (
-                          <a onClick={openFile(product.specificationContentType, product.specification)}>
-                            <Translate contentKey="entity.action.open">Open</Translate>
-                            &nbsp;
-                          </a>
-                        ) : null}
-                        <span>
-                          {product.specificationContentType}, {byteSize(product.specification)}
-                        </span>
-                      </div>
-                    ) : null}
-                  </td>
+                  <td>{product.specification}</td>
                   <td>
                     <Translate contentKey={`mySimpleShopApp.ProductCategory.${product.category}`} />
                   </td>
@@ -121,13 +107,13 @@ export const Product = (props: RouteComponentProps<{ url: string }>) => {
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${product.id}/arch`} color="secondary" size="sm" data-cy="entityArchButton">
-                        <FontAwesomeIcon icon="sync" />{' '}
+                        <FontAwesomeIcon icon="cogs" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.arch">Arch</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${product.id}/apis`} color="secondary" size="sm" data-cy="entityApisButton">
-                        <FontAwesomeIcon icon="sync" />{' '}
+                      <Button tag={Link} to={`${match.url}/${product.id}/apis`} color="warning" size="sm" data-cy="entityApisButton">
+                        <FontAwesomeIcon icon="book" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.apis">Arch</Translate>
                         </span>

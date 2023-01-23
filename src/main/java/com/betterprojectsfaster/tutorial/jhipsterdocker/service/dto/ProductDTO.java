@@ -29,15 +29,13 @@ public class ProductDTO implements Serializable {
 
     private String pictureContentType;
 
-    @Lob
-    private byte[] specification;
-
+    private String specification;
     private String specificationContentType;
     private ProductCategory category;
 
     @NotNull
     @Min(value = 0)
-    private Integer inventory;
+    private String inventory;
 
     public Long getId() {
         return id;
@@ -87,11 +85,11 @@ public class ProductDTO implements Serializable {
         this.pictureContentType = pictureContentType;
     }
 
-    public byte[] getSpecification() {
+    public String getSpecification() {
         return specification;
     }
 
-    public void setSpecification(byte[] specification) {
+    public void setSpecification(String specification) {
         this.specification = specification;
     }
 
@@ -111,11 +109,11 @@ public class ProductDTO implements Serializable {
         this.category = category;
     }
 
-    public Integer getInventory() {
+    public String getInventory() {
         return inventory;
     }
 
-    public void setInventory(Integer inventory) {
+    public void setInventory(String inventory) {
         this.inventory = inventory;
     }
 

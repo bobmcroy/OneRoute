@@ -11,7 +11,7 @@ export interface IProduct {
   specificationContentType?: string | null;
   specification?: string | null;
   category?: ProductCategory | null;
-  inventory?: number;
+  inventory?: string | null;
   productOrders?: IProductOrder[] | null;
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
-import { Button, Row, Col } from 'reactstrap';
+import { Button, Row, Col, Badge } from 'reactstrap';
 import { Translate, openFile, byteSize } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -71,20 +71,7 @@ export const ProductDetail = (props: RouteComponentProps<{ id: string }>) => {
               <Translate contentKey="mySimpleShopApp.product.specification">Specification</Translate>
             </span>
           </dt>
-          <dd>
-            {productEntity.specification ? (
-              <div>
-                {productEntity.specificationContentType ? (
-                  <a onClick={openFile(productEntity.specificationContentType, productEntity.specification)}>
-                    <Translate contentKey="entity.action.open">Open</Translate>&nbsp;
-                  </a>
-                ) : null}
-                <span>
-                  {productEntity.specificationContentType}, {byteSize(productEntity.specification)}
-                </span>
-              </div>
-            ) : null}
-          </dd>
+          <dd>{productEntity.specification}</dd>
           <dt>
             <span id="category">
               <Translate contentKey="mySimpleShopApp.product.category">Category</Translate>

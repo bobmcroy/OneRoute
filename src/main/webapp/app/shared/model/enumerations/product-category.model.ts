@@ -1,11 +1,11 @@
 export enum ProductCategory {
-  Laptop = 'Laptop',
+  Vulnerability = 'Vulnerability',
 
-  Desktop = 'Desktop',
+  Compliance = 'Compliance',
 
-  Phone = 'Phone',
+  None = 'None',
 
-  Tablet = 'Tablet',
+  Cost = 'Cost',
 
-  Accessory = 'Accessory',
+  Rehydration = 'Rehydration',
 }

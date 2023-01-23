@@ -47,16 +47,16 @@ class ProductResourceIT {
     private static final String DEFAULT_PICTURE_CONTENT_TYPE = "image/jpg";
     private static final String UPDATED_PICTURE_CONTENT_TYPE = "image/png";
 
-    private static final byte[] DEFAULT_SPECIFICATION = TestUtil.createByteArray(1, "0");
-    private static final byte[] UPDATED_SPECIFICATION = TestUtil.createByteArray(1, "1");
+    private static final String DEFAULT_SPECIFICATION = "ABC";
+    private static final String UPDATED_SPECIFICATION = "DEF";
     private static final String DEFAULT_SPECIFICATION_CONTENT_TYPE = "image/jpg";
     private static final String UPDATED_SPECIFICATION_CONTENT_TYPE = "image/png";
 
-    private static final ProductCategory DEFAULT_CATEGORY = ProductCategory.Laptop;
-    private static final ProductCategory UPDATED_CATEGORY = ProductCategory.Desktop;
+    private static final ProductCategory DEFAULT_CATEGORY = ProductCategory.Vulnerability;
+    private static final ProductCategory UPDATED_CATEGORY = ProductCategory.Compliance;
 
-    private static final Integer DEFAULT_INVENTORY = 0;
-    private static final Integer UPDATED_INVENTORY = 1;
+    private static final String DEFAULT_INVENTORY = "AAA";
+    private static final String UPDATED_INVENTORY = "BBB";
 
     private static final String ENTITY_API_URL = "/api/products";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
@@ -239,7 +239,7 @@ class ProductResourceIT {
             .andExpect(jsonPath("$.[*].pictureContentType").value(hasItem(DEFAULT_PICTURE_CONTENT_TYPE)))
             .andExpect(jsonPath("$.[*].picture").value(hasItem(Base64Utils.encodeToString(DEFAULT_PICTURE))))
             .andExpect(jsonPath("$.[*].specificationContentType").value(hasItem(DEFAULT_SPECIFICATION_CONTENT_TYPE)))
-            .andExpect(jsonPath("$.[*].specification").value(hasItem(Base64Utils.encodeToString(DEFAULT_SPECIFICATION))))
+            .andExpect(jsonPath("$.[*].specification").value(hasItem(DEFAULT_SPECIFICATION)))
             .andExpect(jsonPath("$.[*].category").value(hasItem(DEFAULT_CATEGORY.toString())))
             .andExpect(jsonPath("$.[*].inventory").value(hasItem(DEFAULT_INVENTORY)));
     }
@@ -262,7 +262,7 @@ class ProductResourceIT {
             .andExpect(jsonPath("$.pictureContentType").value(DEFAULT_PICTURE_CONTENT_TYPE))
             .andExpect(jsonPath("$.picture").value(Base64Utils.encodeToString(DEFAULT_PICTURE)))
             .andExpect(jsonPath("$.specificationContentType").value(DEFAULT_SPECIFICATION_CONTENT_TYPE))
-            .andExpect(jsonPath("$.specification").value(Base64Utils.encodeToString(DEFAULT_SPECIFICATION)))
+            .andExpect(jsonPath("$.specification").value((DEFAULT_SPECIFICATION)))
             .andExpect(jsonPath("$.category").value(DEFAULT_CATEGORY.toString()))
             .andExpect(jsonPath("$.inventory").value(DEFAULT_INVENTORY));
     }

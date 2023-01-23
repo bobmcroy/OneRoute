@@ -9,16 +9,16 @@
       "fieldValidateRulesMaxlength": "90"
     },
     {
-      "fieldName": "price",
-      "fieldType": "Float",
-      "fieldValidateRules": ["required", "min"],
-      "fieldValidateRulesMin": "0"
-    },
-    {
       "fieldName": "description",
       "fieldType": "byte[]",
       "fieldTypeBlobContent": "text",
       "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
     },
     {
       "fieldName": "picture",
@@ -38,9 +38,8 @@
     },
     {
       "fieldName": "inventory",
-      "fieldType": "Integer",
-      "fieldValidateRules": ["required", "min"],
-      "fieldValidateRulesMin": "0"
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
     }
   ],
   "relationships": [
